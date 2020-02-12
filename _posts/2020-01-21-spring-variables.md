@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Spring]@PathVariable과 @RequestParam
+title: Spring::@PathVariable과 @RequestParam
 ---
 <span style="color:gray">
 [생각정리]에 있는 글들은 학습을 하면서
