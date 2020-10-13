@@ -29,6 +29,7 @@
         "bootstrap": "4.5.0",
         "font-awesome": "4.7.0",
         "jquery": "3.5.1",
+        "rouge": "^1.0.3",
         "startbootstrap-clean-blog": "5.0.9"
     },
     "devDependencies": {
