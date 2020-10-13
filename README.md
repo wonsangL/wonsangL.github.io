@@ -1,217 +1,152 @@
-# Type: Minimal and Clean Free Jekyll Theme
+# [Start Bootstrap - Clean Blog Jekyll](https://startbootstrap.com/themes/clean-blog-jekyll/) - Official Jekyll Version
+
+[Clean Blog Jekyll](https://startbootstrap.com/themes/clean-blog-jekyll/) is a stylish, responsive blog theme for [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/). This theme features a blog homepage, about page, contact page, and an example post page along with a working contact form powered by [Formspree](https://formspree.io/).
+
+This repository holds the official Jekyll version of the Clean Blog theme on Start Bootstrap!
+
+## Preview
+
+[![Clean Blog (Jekyll) Preview](https://startbootstrap.com/assets/img/screenshots/themes/clean-blog-jekyll.png)](http://StartBootstrap.github.io/startbootstrap-clean-blog-jekyll/)
+
+**[View Live Preview](http://StartBootstrap.github.io/startbootstrap-clean-blog-jekyll/)**
+
+## Installation & Setup
+
+### Using RubyGems
+
+When installing the theme using RubyGems, demo images, posts, and pages are not included. Follow the instructions below for complete setup.
+
+1. (Optional) Create a new Jekyll site: `jekyll new my-site`
+2. Replace the current theme in your `Gemfile` with `gem "jekyll-theme-clean-blog"`.
+3. Install the theme (run the command inside your site directory): `bundle install`
+4. Replace the current theme in your `_config.yml` file with `theme: jekyll-theme-clean-blog`.
+5. Build your site: `bundle exec jekyll serve`
+
+Assuming there are no errors and the site is building properly, follow these steps next:
+
+1. Create the following pages if they do not exist already (or change the extension of existing markdown files from `.md` to `.html`):
+
+   * `index.html` - set to `layout: home`
+   * `about.html` - set to `layout: page`
+   * `contact.html` - set to `layout: page`
+   * `posts/index.html` - set to `layout: page` (you will also need to create a `posts` directory)
+
+2. Configure the `index.html` front matter. Example:
+
+    ```markdown
+    ---
+    layout: home
+    background: '/PATH_TO_IMAGE'
+    ---
+    ```
+
+3. Configure the `about.html`, `contact.html`, and `posts/index.html` front matter. Example:
+
+    ```markdown
+    ---
+    layout: page
+    title: Page Title
+    description: This is the page description.
+    background: '/PATH_TO_IMAGE'
+    ---
+    ```
+
+4. For each post in the `_posts` directory, update the front matter. Example:
+
+    ```markdown
+    ---
+    layout: post
+    title: "Post Title"
+    subtitle: "This is the post subtitle."
+    date: YYYY-MM-DD HH:MM:SS
+    background: '/PATH_TO_IMAGE'
+    ---
+    ```
+
+    For reference, look at the [demo repository](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll) to see how the files are set up.
+
+5. Add the form to the `contact.html` page. Add the following code to your `contact.html` page:
+
+    ```html
+    <form name="sentMessage" id="contactForm" novalidate>
+      <div class="control-group">
+        <div class="form-group floating-label-form-group controls">
+          <label>Name</label>
+          <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
+          <p class="help-block text-danger"></p>
+        </div>
+      </div>
+      <div class="control-group">
+        <div class="form-group floating-label-form-group controls">
+          <label>Email Address</label>
+          <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
+          <p class="help-block text-danger"></p>
+        </div>
+      </div>
+      <div class="control-group">
+        <div class="form-group col-xs-12 floating-label-form-group controls">
+          <label>Phone Number</label>
+          <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
+          <p class="help-block text-danger"></p>
+        </div>
+      </div>
+      <div class="control-group">
+        <div class="form-group floating-label-form-group controls">
+          <label>Message</label>
+          <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
+          <p class="help-block text-danger"></p>
+        </div>
+      </div>
+      <br>
+      <div id="success"></div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
+      </div>
+    </form>
+    ```
 
-<img alt="Type: Minimal and Clean Free Jekyll Theme" src="https://user-images.githubusercontent.com/626005/63093493-c3daa880-bf65-11e9-860e-da88047cce24.png">
+    Make sure you have the `email` setting in your `_config.yml` file set to a working email address! Once this is set, fill out the form and then check your email, verify the email address using the link sent to you by Formspree, and then the form will be working!
 
-- [Configurations](#configurations)
-- [Deployment](#deployment)
-- [Posts](#posts)
-- [Pages](#pages)
-- [Navigation](#navigation)
-- [Disqus Comments](#disqus-comments)
-- [Google Analytics](#google-analytics)
-- [Social Media Links](#social-media-links)
-- [Update favicon](#update-favicon)
+6. Build your site: `bundle exec jekyll serve`
 
-### Configurations
+### Using Core Files
 
-Type theme comes with different customizations in the `_config.yml` file:
+When using the core files, the demo images, posts, and pages are all included with the download. After following the instructions below, you can then go and change the content of the pages and posts.
 
-```sh
-title:       Type
-email:       ''
-description: ''
-baseurl:     '' # The subpath of your site, e.g. /blog
-url:         '' # The base hostname & protocol for your site
-twitter:     ''
-github:      ''
-instagram:   ''
-facebook:    ''
+1. [Download](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll/archive/master.zip) or Clone the repository.
+2. Update the following configuration settings in your `_config.yml` file:
+   - `baseurl`
+   - `url`
+   - `title`
+   - `email` (after setting this setting to a working email address, fill out the form on the contact page and send it - then check your email and verify the address and the form will send you messages when used)
+   - `description`
+   - `author`
+   - `twitter_username` (Optional)
+   - `facebook_username` (Optional)
+   - `github_username` (Optional)
+   - `linkedin_username` (Optional)
+   - `instagram_username` (Optional)
+3. Build your site: `bundle exec jekyll serve`
 
-markdown:  kramdown
-permalink: pretty
-paginate:  60
+## Bugs and Issues
 
-sass:
-  style: compressed
+Have a bug or an issue with this template? [Open a new issue](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll/issues) here on GitHub!
 
-gems:
-  - jekyll-paginate
-  - jekyll/tagging
+## About
 
-include:
-  - _pages
+Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
 
-exclude:
-  - vendor
-  - Gemfile
-  - Gemfile.lock
+* <https://startbootstrap.com>
+* <https://twitter.com/SBootstrap>
 
-# Tags
-tag_page_dir:         tag
-tag_page_layout:      tag_page
-tag_permalink_style:  pretty
+Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**.
 
-# Pages path
-defaults:
-  - scope:
-      path: '_pages'
-    values:
-      permalink: /:basename:output_ext
-```
+* <http://davidmiller.io>
+* <https://twitter.com/davidmillerskt>
+* <https://github.com/davidtmiller>
 
-### Deployment
+Start Bootstrap is based on the [Bootstrap](https://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
 
-To run the theme locally, navigate to the theme directory and run `bundle install` to install the dependencies, then run `jekyll serve` to start the Jekyll server.
+## Copyright and License
 
-I would recommend checking the [Deployment Methods](https://jekyllrb.com/docs/deployment-methods/) page on Jekyll website.
-
-### Posts
-
-To create a new post, you can create a new markdown file inside the `_posts` directory by following the [recommended file structure](https://jekyllrb.com/docs/posts/#creating-post-files).
-
-The following is a post file with different configurations you can add as an example:
-
-```sh
----
-layout: post
-title: Welcome to Jekyll!
-featured: true
-tags: [frontpage, jekyll, blog]
-image: '/images/welcome.jpg'
----
-```
-
-You can set the author, featured or not, tags, and the post image.
-
-The `featured` key is to mark the post as a featured post, this will add a simple star icon (*) to the postcard.
-
-To keep things more organized, add post images to **/images/pages** directory, and add page images to **/images/pages** directory.
-
-To create a draft post, create the post file under the **_drafts** directory, and you can find more information at [Working with Drafts](http://jekyllrb.com/docs/drafts/).
-
-For tags, try to not add space between two words, for example, `Ruby on Rails`, could be something like (`ruby-on-rails`, `Ruby_on_Rails`, or `Ruby-on-Rails`).
-
-Note that tags are not working with GitHub Pages, that's because the used [jekyll-tagging
-](https://github.com/pattex/jekyll-tagging) plugin is not [whitelisted](https://pages.github.com/versions/) by GitHub.
-
-To make this work, I use [Netlify.com](https://www.netlify.com/) for deployment.
-
-### Pages
-
-To create a new page, just create a new markdown file inside the `_pages` directory.
-
-The following is the `about.md` file that you can find as an example included in the theme with the configurations you can set.
-
-```sh
----
-layout: page
-title: About
-image: '/images/pages/about.jpeg'
----
-```
-
-Things you can change are: `title` and `image` path.
-
-
-### Navigation
-
-The navigation on the sidebar will automatically include all the links to the pages you have created.
-
-### Disqus Comments
-
-Open `_includes/disqus.html` file, and change the `aspirethemes-demos` value on line `12` with your [Disqus account shortname](https://help.disqus.com/customer/portal/articles/466208).
-
-```js
-s.src = '//aspirethemes-demo.disqus.com/embed.js';
-```
-
-So, if your Disqus shortname is `exampleone`, the final code above should be
-
-```js
-s.src = '//exampleone.disqus.com/embed.js';
-```
-
-That's all you need to setup Disqus from the theme side. If you get any issue regarding that comments are unable to load. First, make sure you have [registered your website with Disqus (Step 1)](https://help.disqus.com/customer/portal/articles/466182-publisher-quick-start-guide)
-
-And also check [Disqus troubleshooting guide](https://help.disqus.com/customer/portal/articles/472007-i-m-receiving-the-message-%22we-were-unable-to-load-disqus-%22) if you still have issues.
-
-### Google Analytics
-
-To integrate Google Analytics, open `_includes/analytics.html`, and add your Google Analytics code.
-
-### Social Media Links
-
-Social media links included in `_includes/footer.html` file.
-
-The theme is using [Evil Icons](http://evil-icons.io/), which contains very simple and clean icons. The following is a list of the social media icons to use:
-
-Twitter
-
-```html
-<span data-icon='ei-sc-twitter' data-size='s'></span>
-```
-
-Facebook
-
-```html
-<span data-icon='ei-sc-facebook' data-size='s'></span>
-```
-
-Instagram
-
-```html
-<span data-icon='ei-sc-instagram' data-size='s'></span>
-```
-
-Pinterest
-
-```html
-<span data-icon='ei-sc-pinterest' data-size='s'></span>
-```
-
-Vimeo
-
-```html
-<span data-icon='ei-sc-vimeo' data-size='s'></span>
-```
-
-Google Plus
-
-```html
-<span data-icon='ei-sc-google-plus' data-size='s'></span>
-```
-
-SoundCloud
-
-```html
-<span data-icon='ei-sc-soundcloud' data-size='s'></span>
-```
-
-Tumblr
-
-```html
-<span data-icon='ei-sc-tumblr' data-size='s'></span>
-```
-
-Youtube
-
-```html
-<span data-icon='ei-sc-youtube' data-size='s'></span>
-```
-
-### Update favicon
-
-You can find the current favicon (favicon.ico) inside the theme root directory, just replace it with your new favicon.
-
-
-### Aspire Themes
-
-👉 Visit [**aspirethemes.com**](http://bit.ly/type-jekyll-github-link) for more Jekyll, Ghost, and WordPress themes.
-
-<img alt="Aspire Themes" src="https://user-images.githubusercontent.com/626005/63092640-afe17780-bf62-11e9-9ea9-546489bb282c.png">
-
----
-
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8G8PKPEADPD42&source=url">
-  <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif">
-</a>
+Copyright 2013-2020 Start Bootstrap LLC. Code released under the [MIT](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll/blob/gh-pages/LICENSE) license.
