@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "[Spring Boot] Custom Constraint / Validation 파헤치기"
-subtitle: "Problems look mighty small from 150 miles up"
 date: 2020-01-31 10:45:13 -0400
 background: '/img/posts/06.jpg'
 ---
@@ -30,6 +29,7 @@ validation이 무엇인지 궁금하신 분들은
 - hibernate validator 6.1.5.Final 
 ('spring-boot-starter-validation' dependency에 포함되어 있습니다.)
 - JUnit 5
+
 우선 validation을 수행하기 위해
 
 간단한 핸들러 메소드와 DTO(User class)를 정의해보겠습니다.
